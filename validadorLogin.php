@@ -12,7 +12,7 @@
             //echo $_POST['login'];
             //$senhamd5 = md5($senha);
         $sql = ("SELECT * FROM aluno WHERE (matricula_aluno = '". $_POST['matricula'] ."') AND (cpf_aluno = '". $_POST['senha']."') LIMIT 1;") or die(mysql_error());
-        echo $sql;
+        //echo $sql;
         $query = Select($sql);
         if (mysql_num_rows($query) != 1) {
             // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
@@ -41,11 +41,12 @@
             //echo $_POST['login'];
             //$senhamd5 = md5($senha);
         $sql = ("SELECT * FROM professor WHERE (matricula_professor = '". $_POST['matricula'] ."') AND (cpf_professor = '". $_POST['senha']."') LIMIT 1;") or die(mysql_error());
-        echo $sql;
+        //echo $sql;
         $query = Select($sql);
         if (mysql_num_rows($query) != 1) {
             // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
-            echo "Login inválido!"; exit;
+            echo "Login inválido!";            exit;
+            //header("Location: index.php"); exit;
         } else {
             // Salva os dados encontados na variável $resultado
             $resultado = mysql_fetch_assoc($query);
@@ -60,7 +61,5 @@
           // Redireciona o visitante
           header("Location: restrito.php"); exit;
     }
-
-
-
+    
 ?>

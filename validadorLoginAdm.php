@@ -9,7 +9,7 @@
         $senha = mysql_real_escape_string($_POST['senha']);
             //echo $_POST['login'];
             //$senhamd5 = md5($senha);
-        $sql = ("SELECT * FROM adm WHERE (matricula_aluno = '". $_POST['matricula'] ."') AND (cpf_aluno = '". $_POST['senha']."') LIMIT 1;") or die(mysql_error());
+        $sql = ("SELECT * FROM adm WHERE (login = '". $_POST['matricula'] ."') AND (senha = '". $_POST['senha']."') LIMIT 1;") or die(mysql_error());
         echo $sql;
         $query = Select($sql);
         if (mysql_num_rows($query) != 1) {
