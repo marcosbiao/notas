@@ -1,5 +1,11 @@
 <center> <img src="imagem/seadUfrb.jpg" width="1300" height="300"> </center>
 <br>
+<?php if($_SESSION['UsuarioNivel'] != 1){
+			session_destroy();
+			header("Location: index.php");
+			exit;
+		  }
+	?>
 <ul class="nav nav-tabs">
         <!--Dropdown para bolsa estagio-->
         <li role="presentation"><a href="telaPrincipal.php">Home</a></li>
@@ -11,10 +17,10 @@
                Professor <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar professor</a></li>
-                <li role="presentation"><a href="telaConsultaBeneficiario.php">Consultar professor</a></li>
-                <li role="presentation"><a href="telaSolicitarBolsaEstagio.php">Alterar professor</a></li>
-                <li role="presentation"><a href="telaConsultarSolicitacaoBolsaEstagio.php">Excluir professor</a></li>
+                 <li role="presentation"><a href="telaCadastrarProfessor.php">Cadastrar professor</a></li>
+                <li role="presentation"><a href="telaConsultarProfessor.php">Consultar professor</a></li>
+                <li role="presentation"><a href="telaAlterarProfessor.php">Alterar professor</a></li>
+                <li role="presentation"><a href="telaExcluirProfessor.php">Excluir professor</a></li>
             </ul>
         </li>  
         

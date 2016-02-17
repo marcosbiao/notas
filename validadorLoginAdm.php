@@ -10,7 +10,7 @@
             //echo $_POST['login'];
             //$senhamd5 = md5($senha);
         $sql = ("SELECT * FROM adm WHERE (login = '". $_POST['matricula'] ."') AND (senha = '". $_POST['senha']."') LIMIT 1;") or die(mysql_error());
-        echo $sql;
+        //echo $sql;
         $query = Select($sql);
         if (mysql_num_rows($query) != 1) {
             // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
@@ -27,6 +27,7 @@
           $_SESSION['UsuarioNivel'] = $resultado['nivel'];
           $_SESSION['UsuarioNome'] = $resultado['nome'];
           // Redireciona o visitante
+          //echo $_SESSION['UsuarioID'];
           header("Location: restrito.php"); exit;
     
 
