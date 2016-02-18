@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <?php include("head.php"); ?>
+     
+  <body>
+    
+    <?php include("escolhedorCabecario.php");?>
+      
+      <div class="container panel panel-default">
+			</br></br>
+                        <form action = "fachadaCadastrarDisciplina.php" method = "POST">
+				<div class="panel panel-default jumbotron">	
+					<div id="vpav"></div>
+					<h3>Dados obrigatorios</h3>
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Nome da disciplina</span>
+	  					<input type="text" required="required" class="form-control"  id="nome_disciplina" name="nome_disciplina" placeholder="Digite o nome da disciplina" aria-describedby="sizing-addon2">
+					</div>
+                                        
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Codigo da disciplina</span>
+	  					<input type="text" required="required" class="form-control"  id="cod_disciplina" name="cod_disciplina" placeholder="Digite o codigo da disciplina" aria-describedby="sizing-addon2">
+					</div>
+                                        
+                                        <div>
+                                            <input type="submit" id = "bm" class="btn btn-default topElementos" value="Cadastrar" />
+                                        </div>
+                                </div>
+                        </form>
+        </div>
+      
+    <?php include("script.html"); ?>
+    <?php include("foot.html"); ?>
+  </body>
+</html>

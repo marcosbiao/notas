@@ -31,10 +31,10 @@
                Disciplina <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar disciplina</a></li>
-                <li role="presentation"><a href="telaConsultaBeneficiario.php">Consultar disciplina</a></li>
-                <li role="presentation"><a href="telaSolicitarBolsaEstagio.php">Alterar disciplina</a></li>
-                <li role="presentation"><a href="telaConsultarSolicitacaoBolsaEstagio.php">Excluir disciplina</a></li>
+                 <li role="presentation"><a href="telaCadastrarDisciplina.php">Cadastrar disciplina</a></li>
+                 <li role="presentation"><a href="telaConsultarDisciplina.php">Consultar disciplina</a></li>
+                 <li role="presentation"><a href="telaAlterarDisciplina.php">Alterar disciplina</a></li>
+                 <li role="presentation"><a href="telaExcluirDisciplina.php">Excluir disciplina</a></li>
             </ul>
         </li> 
         
@@ -45,9 +45,9 @@
                Semestre <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar semestre</a></li>
-                <li role="presentation"><a href="telaConsultaBeneficiario.php">Consultar semestre</a></li>
-                <li role="presentation"><a href="telaSolicitarBolsaEstagio.php">Alterar semestre</a></li>
+                 <li role="presentation"><a href="telaCadastrarSemestre.php">Cadastrar semestre</a></li>
+                 <li role="presentation"><a href="telaConsultarSemestre.php">Consultar semestre</a></li>
+                 <li role="presentation"><a href="telaAlterarSemestre.php">Alterar semestre</a></li>
                 <li role="presentation"><a href="telaConsultarSolicitacaoBolsaEstagio.php">Excluir semestre</a></li>
             </ul>
         </li> 

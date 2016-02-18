@@ -12,7 +12,7 @@
         echo $id_professor;
         // chamando a função query da classe banco para adicionar ao banco de dados
         $b = "update professor set nome_professor = '$nome_professor', matricula_professor=$matricula_professor, cpf_professor = $cpf_professor where id_professor = $id_professor";
-        echo $b;
+        //echo $b;
         noQuery($b);
     ?>
 <script>

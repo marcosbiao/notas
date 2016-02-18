@@ -12,8 +12,8 @@
         //$data2 = explode("-" or "/" or "." ,$data); 
         //$data = implode("",$data2);
         // chamando a função query da classe banco para adicionar ao banco de dados
-        $b = "INSERT INTO professor (nome_professor,matricula_professor,cpf_professor,nivel) "
-                . "VALUES ('$nome_professor',$matricula_professor,$cpf,2)";
+        $b = "INSERT INTO professor (nome_professor,matricula_professor,cpf_professor,nivel,ativo) "
+                . "VALUES ('$nome_professor',$matricula_professor,$cpf,2,1)";
         echo $b;
         noQuery($b);
     ?>
