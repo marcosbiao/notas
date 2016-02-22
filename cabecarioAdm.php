@@ -52,7 +52,17 @@
             </ul>
         </li> 
         
-        <li role="presentation"><a href="logout.php">CRUD turma</a></li>
+        <li role="presentation" class="dropdown">
+             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+               Turma <span class="caret"></span>
+             </a>
+             <ul class="dropdown-menu">
+                 <li role="presentation"><a href="telaCadastrarTurma.php    ">Cadastrar turma</a></li>
+                 <li role="presentation"><a href="telaConsultarSemestre.php">Consultar semestre</a></li>
+                 <li role="presentation"><a href="telaAlterarSemestre.php">Alterar semestre</a></li>
+                <li role="presentation"><a href="telaConsultarSolicitacaoBolsaEstagio.php">Excluir semestre</a></li>
+            </ul>
+        </li>
         
         <li role="presentation"><a href="logout.php">Sair</a></li>
       </ul>

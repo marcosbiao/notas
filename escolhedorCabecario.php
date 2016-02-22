@@ -13,7 +13,7 @@
             include("");
             break;
         case 4://aluno
-            
+            include("cabecarioAluno.php");
             break;
         case 5:
             
