@@ -14,11 +14,11 @@
       
       <div class="container panel panel-default">
 	</br></br>
-        <h3>Informe o ID da disciplina e a senha</h3>
+        <h3>Informe o ID da turma e a senha</h3>
         <form action="fachadaAlunoDisciplina.php" method="POST">
             <div class="input-group">
                 <span class="input-group-addon" id="sizing-addon2">ID</span>
-                <input type="text" required="required" class="form-control"  id="id" name="id" placeholder="Digite o ID da turma" aria-describedby="sizing-addon2">
+                <input type="text" required="required" class="form-control"  id="id_turma" name="id_turma" placeholder="Digite o ID da turma" aria-describedby="sizing-addon2">
             </div>
             
             <div class="input-group">
