@@ -6,7 +6,8 @@
     <body>
         
         <?php include("escolhedorCabecario.php"); ?>
-        <?php 
+        <?php
+            
             if($_SESSION['UsuarioNivel']==4){
                 include("notasAluno.php");
             }
