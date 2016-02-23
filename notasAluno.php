@@ -4,7 +4,7 @@
     $id_aluno = ($_SESSION['UsuarioID']);
     $query = "Select AT.turma_id_turma, P.nome_professor,D.nome_disciplina,S.nome_semestre,AT.nota1,AT.nota2,AT.nota3,AT.nota4,AT.media from aluno_turma AT "
             . "join aluno A on (AT.aluno_id_aluno = A.id_aluno) "
-            . "join turma T on (AT.turma_id_turma = T.id_turma) "
+            . "join turmas T on (AT.turma_id_turma = T.id_turma) "
             . "join disciplina D on (T.disciplina_id_disciplina = D.id_disciplina) "
             . "join semestre S on (T.semestre_id_semestre = S.id_semestre) "
             . "join professor P on (T.professor_id_professor = P.id_professor) "

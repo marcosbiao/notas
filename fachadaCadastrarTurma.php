@@ -11,7 +11,7 @@
         $senha = trim($_POST["senha"]);
         
         // chamando a função query da classe banco para adicionar ao banco de dados
-        $b = "INSERT INTO turma (professor_id_professor,disciplina_id_disciplina,semestre_id_semestre,senha) "
+        $b = "INSERT INTO turmas (professor_id_professor,disciplina_id_disciplina,semestre_id_semestre,senha) "
                 . "VALUES ($id_professor,$id_disciplina,$id_semestre,'$senha')";
         //echo $b;
         noQuery($b);
