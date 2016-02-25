@@ -12,7 +12,7 @@
         
         <li role="presentation"><a href="telaSelecionarTurma.php">Cadastrar notas</a></li>
         
-        <li role="presentation"><a href="telaAlunoDisciplina.php">Cadastrar disciplina</a></li>
+        <li role="presentation"><a href="telaCadastrarTurmaProfessor.php">Cadastrar turma</a></li>
                 
         <li role="presentation"><a href="logout.php">Sair</a></li>
       </ul>

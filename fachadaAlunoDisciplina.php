@@ -18,7 +18,7 @@ if (!isset($_SESSION['UsuarioID'])) {
         $id_turma = trim($_POST["id_turma"]);
         $senha = trim($_POST["senha"]);
         // chamando a função query da classe banco para adicionar ao banco de dados
-        $query = "select * from turma where id_turma = $id_turma";
+        $query = "select * from turmas where id_turma = $id_turma";
         $rs = Select ($query);
         $row = mysql_fetch_array($rs);
         
@@ -30,7 +30,7 @@ if (!isset($_SESSION['UsuarioID'])) {
         if($row['senha']==$senha){
             $b = "INSERT INTO aluno_turma (aluno_id_aluno,turma_id_turma,turma_professor_id_professor,turma_disciplina_id_disciplina,turma_semestre_id_semestre) "
             . "VALUES ($id_aluno,$id_turma,$id_professor,$id_disciplina,$id_semestre)";
-            echo $b;
+            //echo $b;
             noQuery($b);
         }else{
             header("Location: telaAlunoDisciplinaErro.php");
