@@ -20,7 +20,7 @@
                         <form action = "fachadaAlterarDisciplina.php" method="POST"">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
-					<h3>Cadastro Disciplina</h3>
+					<h3>Alterar dados de disciplina</h3>
                                         <div class="input-group">
                                         <span class="input-group-addon" id="sizing-addon2">Selecione a disciplina</span>
                                         <select name="id_disciplina">

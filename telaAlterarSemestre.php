@@ -20,7 +20,7 @@
                         <form action = "fachadaAlterarSemestre.php" method="POST"">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
-					<h3>Cadastro Usuario</h3>
+					<h3>Alterar dados de semestre</h3>
                                         <div class="input-group">
                                         <span class="input-group-addon" id="sizing-addon2">Selecione o semestre</span>
                                         <select name="id_semestre">

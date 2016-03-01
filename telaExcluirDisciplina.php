@@ -18,7 +18,7 @@
                         <form action = "fachadaExcluirDisciplina.php" method="POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
-					<h3>Cadastro Usuario</h3>
+					<h3>Excluir disciplina</h3>
                                         <div class="input-group">
                                         <span class="input-group-addon" id="sizing-addon2">Selecione a disciplina</span>
                                         <select name="id_disciplina">

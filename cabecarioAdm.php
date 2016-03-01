@@ -48,7 +48,7 @@
                  <li role="presentation"><a href="telaCadastrarSemestre.php">Cadastrar semestre</a></li>
                  <li role="presentation"><a href="telaConsultarSemestre.php">Consultar semestre</a></li>
                  <li role="presentation"><a href="telaAlterarSemestre.php">Alterar semestre</a></li>
-                <li role="presentation"><a href="telaConsultarSolicitacaoBolsaEstagio.php">Excluir semestre</a></li>
+                 <li role="presentation"><a href="telaExcluirSemestre.php">Excluir semestre</a></li>
             </ul>
         </li> 
         

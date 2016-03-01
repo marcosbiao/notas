@@ -18,7 +18,7 @@
                         <form action = "fachadaExcluirProfessor.php" method="POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
-					<h3>Cadastro Usuario</h3>
+					<h3>Excluir professor</h3>
                                         <div class="input-group">
                                         <span class="input-group-addon" id="sizing-addon2">Selecione o professor</span>
                                         <select name="id_professor">
