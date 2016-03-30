@@ -29,7 +29,7 @@
         // Se a sessão não existir, inicia uma
           if (!isset($_SESSION)) session_start();
           // Salva os dados encontrados na sessão
-          $_SESSION['UsuarioID'] = $resultado['id_aluno'];
+          $_SESSION['UsuarioID'] = $resultado['matricula_aluno'];
           $_SESSION['UsuarioLogin'] = $resultado['matricula_aluno'];
           $_SESSION['UsuarioNivel'] = $resultado['nivel'];
           $_SESSION['UsuarioNome'] = $resultado['nome_aluno'];

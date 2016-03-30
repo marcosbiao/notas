@@ -66,7 +66,17 @@
 	  					<span class="input-group-addon" id="sizing-addon2">Senha</span>
 	  					<input type="text" required="required" class="form-control"  id="senha" name="senha" placeholder="Digite a senha da disciplina" aria-describedby="sizing-addon2">
 					</div>
-                                                                            
+                                                
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Quantidade de avaliações do forum</span>
+	  					<input type="text" required="required" class="form-control"  id="ava_forum" name="ava_forum" placeholder="Digite a quantidade de avaliações" aria-describedby="sizing-addon2">
+					</div>
+                                        
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Quantidade de avaliações presenciais</span>
+	  					<input type="text" required="required" class="form-control"  id="ava_presencial" name="ava_presencial" placeholder="Digite a quantidade de avaliações" aria-describedby="sizing-addon2">
+					</div>
+                                        
                                         <div>
                                             <input type="submit" id = "bm" class="btn btn-default topElementos" value="Cadastrar" />
                                         </div>

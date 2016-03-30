@@ -2,7 +2,7 @@
     <?php 
     include("banco/banco.php");
     $id_professor = ($_SESSION['UsuarioID']);
-    $query = "Select T.id_turma, D.nome_disciplina, S.nome_semestre, T.senha from turmas T "
+    $query = "Select T.id_turma, D.nome_disciplina, S.nome_semestre, T.senha from turma T "
             . "join disciplina D on (T.disciplina_id_disciplina = D.id_disciplina)"
             . "join semestre S on (T.semestre_id_semestre = S.id_semestre) "
             . "where T.professor_id_professor = $id_professor order by T.semestre_id_semestre DESC";
@@ -42,4 +42,4 @@
       </tbody>
   </table>
 
-    ?>
+    

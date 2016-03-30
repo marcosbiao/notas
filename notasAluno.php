@@ -1,17 +1,30 @@
     
     <?php 
     include("banco/banco.php");
-    $id_aluno = ($_SESSION['UsuarioID']);
-    $query = "Select AT.turma_id_turma, P.nome_professor,D.nome_disciplina,S.nome_semestre,AT.nota1,AT.nota2,AT.nota3,AT.nota4,AT.media from aluno_turma AT "
-            . "join aluno A on (AT.aluno_id_aluno = A.id_aluno) "
-            . "join turmas T on (AT.turma_id_turma = T.id_turma) "
+    $matricula_aluno = ($_SESSION['UsuarioID']);
+    $query = "Select AT.turma_id_turma, P.nome_professor,D.nome_disciplina,S.nome_semestre,AT.med_forum,AT.med_presencial,AT.media,AT.situacao,AT.nota_final,AT.media_final from aluno_turma AT "
+            . "join aluno A on (AT.aluno_matricula_aluno = A.matricula_aluno) "
+            . "join turma T on (AT.turma_id_turma = T.id_turma) "
             . "join disciplina D on (T.disciplina_id_disciplina = D.id_disciplina) "
             . "join semestre S on (T.semestre_id_semestre = S.id_semestre) "
             . "join professor P on (T.professor_id_professor = P.id_professor) "
-            . "where AT.aluno_id_aluno = $id_aluno order by AT.turma_semestre_id_semestre";
+            . "where AT.aluno_matricula_aluno = $matricula_aluno order by AT.turma_semestre_id_semestre";
     //echo $query;
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
+    ?>
+    <?php 
+    $query2 = "Select count(*) as qtd from ava_forum where aluno_turma_aluno_matricula_aluno = $matricula_aluno and aluno_turma_turma_id_turma = 1";
+    $rs2 = Select ($query2);
+    $row2 = mysql_fetch_array($rs2);
+    $qtd_ava_forum = $row2['qtd'];
+    ?>
+
+    <?php 
+    $query3 = "Select nota from ava_forum where aluno_turma_aluno_matricula_aluno = $matricula_aluno and aluno_turma_turma_id_turma = 1";
+    $rs3 = Select ($query3);
+    $row3 = mysql_fetch_array($rs3);
+    $qtd_ava_forum = $row2['qtd'];
     ?>
 
     
@@ -23,11 +36,17 @@
             <th>Professor</th>
             <th>Disciplina</th>
             <th>Semestre</th>
-            <th>Nota 1</th>
-            <th>Nota 2</th>
-            <th>Nota 3</th>
-            <th>Nota 4</th>
-            <th>Media</th>    
+            <?php 
+                for($i=1;$i<=$qtd_ava_forum;$i++){
+                    echo "<th>Nota forum ".$i;
+                }
+            ?>
+            <th>Media Forum</th>
+            <th>Media Presencial</th>
+            <th>Media total</th>
+            <th>Situação</th>
+            <th>Nota Final</th>
+            <th>Media Final</th>
           </tr>
       </thead>
       <tbody>
@@ -36,12 +55,16 @@
               echo"<td>".$row['turma_id_turma']."</td>" ;
               echo"<td>".$row['nome_professor']."</td>" ;
               echo"<td>".$row['nome_disciplina']."</td>" ;
-              echo"<td>".$row['nome_semestre']."</td>" ; 
-              echo"<td>".$row['nota1']."</td>" ;
-              echo"<td>".$row['nota2']."</td>" ;
-              echo"<td>".$row['nota3']."</td>" ; 
-              echo"<td>".$row['nota4']."</td>" ;
+              echo"<td>".$row['nome_semestre']."</td>" ;
+              for($i=1;$i<=$qtd_ava_forum;$i++){
+                    echo "<td>Nota forum ".$i;
+                }
+              echo"<td>".$row['med_forum']."</td>" ;
+              echo"<td>".$row['med_presencial']."</td>" ;
               echo"<td>".$row['media']."</td>" ; 
+              echo"<td>".$row['situacao']."</td>" ;
+              echo"<td>".$row['nota_final']."</td>" ; 
+              echo"<td>".$row['media_final']."</td>" ; 
               echo "</tr>";
           while($row = mysql_fetch_array($rs)){
               echo '<tr>';  
@@ -49,15 +72,16 @@
               echo"<td>".$row['nome_professor']."</td>" ;
               echo"<td>".$row['nome_disciplina']."</td>" ;
               echo"<td>".$row['nome_semestre']."</td>" ; 
-              echo"<td>".$row['nota1']."</td>" ;
-              echo"<td>".$row['nota2']."</td>" ;
-              echo"<td>".$row['nota3']."</td>" ; 
-              echo"<td>".$row['nota4']."</td>" ;
-              echo"<td>".$row['media']."</td>" ;
+              echo"<td>".$row['med_forum']."</td>" ;
+              echo"<td>".$row['med_presencial']."</td>" ;
+              echo"<td>".$row['media']."</td>" ; 
+              echo"<td>".$row['situacao']."</td>" ;
+              echo"<td>".$row['nota_final']."</td>" ; 
+              echo"<td>".$row['media_final']."</td>" ; 
               echo "</tr>";
           }
           ?>
       </tbody>
   </table>
 
-    ?>
+    

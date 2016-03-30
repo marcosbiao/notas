@@ -4,11 +4,12 @@ if (!isset($_SESSION)) session_start();
 // Verifica se não há a variável da sessão que identifica o usuário
 if (!isset($_SESSION['UsuarioID'])) {
   // Destrói a sessão por segurança
-    echo $_SESSION['UsuarioID'];exit;
+    echo $_SESSION['UsuarioID'];
+    echo 'kjcsokdcj';
     session_destroy();
   // Redireciona o visitante de volta pro login
-  echo $_SESSION['UsuarioID'];exit;
-  //header("Location: index.php"); exit;
+  echo $_SESSION['UsuarioID'];
+  header("Location: index.php"); exit;
 }
 ?>
 

@@ -10,6 +10,8 @@
         <!--Dropdown para bolsa estagio-->
         <li role="presentation"><a href="telaPrincipal.php">Home</a></li>
         
+        <li role="presentation"><a href="telaVerificarNotas.php">Verificar Notas</a></li>
+        
         <li role="presentation"><a href="telaAlunoDisciplina.php">Cadastrar disciplina</a></li>
                 
         <li role="presentation"><a href="logout.php">Sair</a></li>
