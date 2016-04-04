@@ -2,7 +2,7 @@
     <?php include("head.php");  ?>
     <?php 
     include("banco/banco.php");
-    $query = "Select T.id_turma, D.nome_disciplina, S.nome_semestre from turmas T "
+    $query = "Select T.id_turma, D.nome_disciplina, S.nome_semestre from turma T "
             . "join disciplina D on T.disciplina_id_disciplina = D.id_disciplina "
             . "join semestre S on T.semestre_id_semestre = S.id_semestre "
             . "where professor_id_professor=" .$_SESSION['UsuarioID']." order by semestre_id_semestre DESC";

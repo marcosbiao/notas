@@ -12,6 +12,7 @@
     include("banco/banco.php");
     $id_turma = $_POST['id_turma'];
     $matricula_aluno = ($_SESSION['UsuarioID']);
+    //query para dados gerais da turma
     $query = "Select AT.turma_id_turma, P.nome_professor,D.nome_disciplina,S.nome_semestre,AT.med_forum,AT.med_presencial,AT.media,AT.situacao,AT.nota_final,AT.media_final from aluno_turma AT "
             . "join aluno A on (AT.aluno_matricula_aluno = A.matricula_aluno) "
             . "join turma T on (AT.turma_id_turma = T.id_turma) "
@@ -24,6 +25,7 @@
     $row = mysql_fetch_array($rs);
     ?>
     <?php 
+    //query para saber quantas notas de forum essa turma tem.
     $query2 = "Select count(*) as qtd from ava_forum where aluno_turma_aluno_matricula_aluno = $matricula_aluno and aluno_turma_turma_id_turma = $id_turma";
     $rs2 = Select ($query2);
     $row2 = mysql_fetch_array($rs2);
