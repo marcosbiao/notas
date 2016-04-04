@@ -76,8 +76,7 @@
               echo"<td> <input type='submit' id = 'bm' value='Salvar' /> </td>" ;
               echo "</tr>"; ?>
           </form>
-          <?php }
-          ?>
+          <?php } ?>
       
       </tbody>
   </table>

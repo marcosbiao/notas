@@ -14,6 +14,10 @@
         
         for($i=1;$i<=$qtd_ava_forum;$i++){
             $nota = $_POST["nota$i"];
+            if($nota == NULL){
+                //echo ' esta vazio '.$nota. ' ta vendo em '. $i;
+                continue;
+            }
             $b = "update ava_forum set ";
             $b = $b ." nota =  $nota where aluno_turma_turma_id_turma = $id_turma and aluno_turma_aluno_matricula_aluno = $matricula_aluno and id_ava_forum = $i" ;
             //echo $b;
