@@ -9,7 +9,7 @@
         <div class="container panel panel-default">
             <form action="validadorLoginAdm.php" method="POST">
                 <center>
-                    <div>
+                    <div> 
                         <label>Login</label>
                         <input type="text" name="matricula" id="matricula">
                     </div>
